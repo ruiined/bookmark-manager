@@ -1,0 +1,17 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/ruiined/Documents/Projects/bookmark-manager/app.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/ruiined/Documents/Projects/bookmark-manager/spec/features/web_helpers.rb": {
+        "lines": [
+
+        ]
+      }
+    },
+    "timestamp": 1647270328
+  }
+}
