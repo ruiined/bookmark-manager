@@ -28,6 +28,25 @@
       "/Users/ruiined/Documents/Projects/bookmark-manager/lib/bookmarks.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          6,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
           1,
           2,
           null,
@@ -49,6 +68,10 @@
           1,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -63,6 +86,6 @@
         ]
       }
     },
-    "timestamp": 1647272278
+    "timestamp": 1647278840
   }
 }
