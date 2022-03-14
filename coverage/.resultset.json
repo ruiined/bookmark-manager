@@ -3,15 +3,66 @@
     "coverage": {
       "/Users/ruiined/Documents/Projects/bookmark-manager/app.rb": {
         "lines": [
-
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/ruiined/Documents/Projects/bookmark-manager/lib/bookmarks.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null
         ]
       },
       "/Users/ruiined/Documents/Projects/bookmark-manager/spec/features/web_helpers.rb": {
         "lines": [
 
         ]
+      },
+      "/Users/ruiined/Documents/Projects/bookmark-manager/spec/bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ruiined/Documents/Projects/bookmark-manager/spec/features/feature_test_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1647270328
+    "timestamp": 1647272278
   }
 }

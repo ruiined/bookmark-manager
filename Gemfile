@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 # gem 'puma'
 gem 'webrick'
+gem 'pg'
 
 group :test do
   gem 'capybara'
