@@ -20,7 +20,7 @@
 
 <h1> Bookmarks </h1>
 <% @bookmarks.each do |bookmark| %>
-    <%= bookmark %>
+    <a href="<%= bookmark.url %>"><%= bookmark.title %></a>
     <br>
 <% end %>
 <form action="/add_bookmark_form">

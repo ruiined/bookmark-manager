@@ -1,30 +1,27 @@
 # frozen_string_literal: true
 
 require 'pg'
+require_relative 'bookmark'
 
 # Bookmarks
 class Bookmarks
   class << self
-    def all
+    def all(bookmark_class = Bookmark)
       connect_to_database
       command('SELECT * FROM bookmarks')
-      process_response
+      process_response(bookmark_class)
     end
 
-    def add(url, title)
+    def add(bookmark)
       connect_to_database
-      command("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}')")
-    end
-
-    def generate_split
-      maria_split = rand(1,100)
+      command("INSERT INTO bookmarks (url, title) VALUES ('#{bookmark.url}', '#{bookmark.title}')")
     end
 
     private
 
-    def process_response
+    def process_response(bookmark_class)
       @response.map do |record|
-        Bookmark.new(record['url'], record['title'])
+        bookmark_class.new(record['url'], record['title'])
       end
     end
 

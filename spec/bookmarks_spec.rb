@@ -3,17 +3,21 @@
 require 'bookmarks'
 
 describe Bookmarks do
-  let(:link) { 'http://testing_bookmarks.com' }
-
+  subject(:bookmarks) { described_class.all(bookmark_class) }
+  let(:title) { "Testing Bookmarks" }
+  let(:url) { 'http://testing_bookmarks.com' }
+  let(:bookmark_class) { double :bookmark_class, new: bookmark }
+  let(:bookmark) { double :bookmark, title: title, url: url}
+  
   describe '.all' do
     it 'returns an array of bookmarks' do
-      expect(described_class.all).to be_an_instance_of(Array)
+      expect(bookmarks).to be_an_instance_of(Array)
     end
   end
   describe '.add' do
     it 'adds to the test database' do
-      described_class.add(link)
-      expect(described_class.all).to include link
+      described_class.add(bookmark)
+      expect(bookmarks).to eq [bookmark]
     end
   end
 end
