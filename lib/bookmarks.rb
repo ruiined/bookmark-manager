@@ -2,22 +2,29 @@
 
 require 'pg'
 
+# Bookmarks
 class Bookmarks
-  def self.all
-    extract_urls
-  end
-
-  def self.extract_urls
-    pg_records.map do |record|
-      record['url']
+  class << self
+    def all
+      connect_to_database
+      request
+      process_response
     end
-  end
 
-  def self.pg_records
-    connect_to_pg.exec('SELECT * FROM bookmarks')
-  end
+    private
 
-  def self.connect_to_pg
-    PG.connect(dbname: 'bookmark_manager')
+    def process_response
+      @response.map do |record|
+        record['url']
+      end
+    end
+
+    def request
+      @response = @connection.exec('SELECT * FROM bookmarks')
+    end
+
+    def connect_to_database
+      @connection = PG.connect(dbname: 'bookmark_manager')
+    end
   end
 end
