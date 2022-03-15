@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/bookmarks'
 
+# Bookmark Manager
 class BookmarkManager < Sinatra::Base
   configure :development do
     # :nocov:
