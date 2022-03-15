@@ -2,11 +2,11 @@
 
 source 'https://rubygems.org'
 
+gem 'pg'
 gem 'rack'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'webrick'
-gem 'pg'
 
 group :test do
   gem 'capybara'
