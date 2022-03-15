@@ -1,5 +1,29 @@
+<head>
+<title>Pile of Site</title>
+<style>
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+<h1 class="blink_me" style="color:saddlebrown;">Welcome to Pile of Site</h1>
+
+
+
 <h1> Bookmarks </h1>
 <% @bookmarks.each do |bookmark| %>
     <%= bookmark %>
     <br>
 <% end %>
+<form action="/add_bookmark_form">
+  <input type="submit" value="Add Bookmark">
+</form>
+</body>

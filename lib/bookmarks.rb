@@ -11,16 +11,20 @@ class Bookmarks
       process_response
     end
 
-    def add(url)
+    def add(url, title)
       connect_to_database
-      command("INSERT INTO bookmarks (url) VALUES ('#{url}')")
+      command("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}')")
+    end
+
+    def generate_split
+      maria_split = rand(1,100)
     end
 
     private
 
     def process_response
       @response.map do |record|
-        record['url']
+        Bookmark.new(record['url'], record['title'])
       end
     end
 
